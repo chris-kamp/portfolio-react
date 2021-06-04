@@ -11,7 +11,7 @@ const Navbar = () => {
           className="rounded-full"
         />
       </div>
-      <ul className="flex justify-around tracking-widest flex-auto max-w-2xl">
+      <ul className="flex justify-around tracking-widest flex-auto max-w-2xl lg:max-w-3xl xl:max-w-4xl">
         <NavItem text="HOME"/>
         <NavItem text="ABOUT"/>
         <NavItem text="PROJECTS"/>
