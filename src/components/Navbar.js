@@ -3,7 +3,7 @@ import NavItem from "./NavItem"
 const Navbar = () => {
   return (
     <nav className="h-20 text-iceBlue font-nunito font-bold text-xl flex justify-between">
-      <div className="flex min-w-max justify-center items-center w-32">
+      <div className="ml-12 flex min-w-max items-center w-32">
         <img
           src="https://via.placeholder.com/60"
           alt="CK Logo"
