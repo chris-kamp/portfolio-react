@@ -7,13 +7,18 @@ module.exports = {
       colors: {
         blueGray: colors.blueGray,
         dark: "#020723",
-        iceBlue: "#D8F2F2",
+        light: "#D8F2F2",
+        primary: "#AEEEFF",
       },
       fontFamily: {
         nunito: ['"Nunito Sans"', "sans-serif"],
       },
       gridTemplateRows: {
         "2af": "auto 1fr",
+      },
+      borderWidth: {
+        16: "16px",
+        32: "32px",
       },
     },
   },

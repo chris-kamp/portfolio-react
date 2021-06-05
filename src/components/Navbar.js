@@ -2,7 +2,7 @@ import NavItem from "./NavItem"
 
 const Navbar = () => {
   return (
-    <nav className="h-20 text-iceBlue font-nunito font-bold text-xl flex justify-between">
+    <nav className="h-20 text-light font-nunito font-bold text-xl flex justify-between">
       <div className="ml-12 flex min-w-max items-center w-32">
         <img
           src="https://via.placeholder.com/60"
