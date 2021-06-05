@@ -12,6 +12,9 @@ module.exports = {
       fontFamily: {
         nunito: ['"Nunito Sans"', "sans-serif"],
       },
+      gridTemplateRows: {
+        "2af": "auto 1fr",
+      },
     },
   },
   variants: {

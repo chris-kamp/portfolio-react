@@ -5,9 +5,8 @@ const Navbar = () => {
     <nav className="h-20 text-iceBlue font-nunito font-bold text-xl flex justify-between">
       <div className="flex min-w-max justify-center items-center w-32">
         <img
-          src="https://picsum.photos/60/60"
+          src="https://via.placeholder.com/60"
           alt="CK Logo"
-          srcset=""
           className="rounded-full"
         />
       </div>
