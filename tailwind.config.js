@@ -20,6 +20,9 @@ module.exports = {
         16: "16px",
         32: "32px",
       },
+      screens: {
+        'xs': '360px'
+      }
     },
   },
   variants: {

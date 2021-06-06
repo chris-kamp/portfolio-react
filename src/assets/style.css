@@ -1,10 +1,13 @@
-.link-fill {
-  border-left: solid 24px #AEEEFF;
-  background: linear-gradient(to right, transparent 50%, #AEEEFF 50%);
-  background-size: 200% 100%;
-  transition: 1s;
+@media only screen and (min-width: 640px) {
+  .link-fill {
+    border-left: solid 24px #AEEEFF;
+    background: linear-gradient(to right, transparent 50%, #AEEEFF 50%);
+    background-size: 200% 100%;
+    transition: 0.7s;
+  }
+  
+  .link-fill:hover {
+    background-position: -20% 0;
+  }
 }
 
-.link-fill:hover {
-  background-position: -20% 0;
-}
