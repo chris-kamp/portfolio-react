@@ -1,6 +1,6 @@
-import Navbar from "../nav/Navbar"
-import HomeBlurb from "./HomeBlurb"
-import HomeLinks from "./HomeLinks"
+import Navbar from "../nav/Navbar";
+import HomeBlurb from "./HomeBlurb";
+import HomeLinks from "./HomeLinks";
 
 const Home = () => {
   return (
@@ -11,8 +11,7 @@ const Home = () => {
         <HomeLinks />
       </div>
     </div>
-    
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
