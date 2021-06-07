@@ -24,8 +24,8 @@ module.exports = {
       },
     },
     screens: {
-      'xs': '360px',
-      ...defaultTheme.screens
+      ...defaultTheme.screens,
+      'xs': '360px'
     }
   },
   variants: {
