@@ -2,15 +2,15 @@ import NavItem from "./NavItem"
 
 const Navbar = () => {
   return (
-    <nav className="h-20 text-light font-nunito font-bold text-xl flex justify-between">
-      <div className="ml-3 sm:ml-12 flex min-w-max items-center w-32">
+    <nav className="flex justify-between h-20 text-xl font-bold text-light font-nunito">
+      <div className="flex items-center w-32 ml-3 sm:ml-12 min-w-max">
         <img
           src="https://via.placeholder.com/60"
           alt="CK Logo"
           className="rounded-full"
         />
       </div>
-      <ul className="flex justify-around tracking-widest flex-auto max-w-2xl lg:max-w-3xl xl:max-w-4xl">
+      <ul className="flex justify-around flex-auto max-w-2xl tracking-widest lg:max-w-3xl xl:max-w-4xl">
         <NavItem text="HOME"/>
         <NavItem text="ABOUT"/>
         <NavItem text="PROJECTS"/>
