@@ -1,5 +1,5 @@
 const colors = require("tailwindcss/colors");
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: [],
@@ -22,11 +22,16 @@ module.exports = {
         16: "16px",
         32: "32px",
       },
+      letterSpacing: {
+        xwide: ".125em",
+        "2xwide": ".15em",
+        "3xwide": ".2em",
+      },
     },
     screens: {
-      'xs': '360px',
-      ...defaultTheme.screens
-    }
+      xs: "360px",
+      ...defaultTheme.screens,
+    },
   },
   variants: {
     extend: {

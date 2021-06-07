@@ -6,7 +6,7 @@ const NavItem = ({text, destination}) => {
       <Link
         to={destination}
         href="#"
-        className="flex items-center justify-center w-full h-full border-b border-transparent hover:border-white"
+        className="flex items-center justify-center w-full h-full border-b border-transparent hover:border-light"
       >
         {text}
       </Link>
