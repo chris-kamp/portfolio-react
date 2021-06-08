@@ -28,6 +28,18 @@ module.exports = {
         "3xwide": ".2em",
       },
     },
+    minWidth: {
+      '0': '0px',
+      '1/10': '10%',
+      '1/5': '20%',
+      '1/4': '25%',
+      '1/3': '33.3333%',
+      '1/2': '50%',
+      '3/4': '75%',
+      'full': '100%',
+      'min': 'min-content',
+      'max': 'max-content'
+    },
     screens: {
       xs: "360px",
       ...defaultTheme.screens,
