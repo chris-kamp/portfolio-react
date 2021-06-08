@@ -2,6 +2,7 @@ import Navbar from "../nav/Navbar"
 import AboutHeading from "./AboutHeading"
 import Card from "./Card"
 import Bio from "./Bio"
+import TechStack from "./TechStack"
 
 const About = () => {
   return (
@@ -12,6 +13,9 @@ const About = () => {
         <div className="flex flex-col items-center">
           <Card heading="BIO">
             <Bio />
+          </Card>
+          <Card heading="TECH STACK">
+            <TechStack />
           </Card>
         </div>
       </main>
