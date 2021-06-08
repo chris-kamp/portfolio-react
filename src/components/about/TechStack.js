@@ -3,8 +3,7 @@ import TechStackSection from "./TechStackSection"
 
 const TechStack = () => {
   return (
-    <div className="text-light">
-
+    <div>
       <TechStackSection posStart={true} heading="LANGUAGES">
         <TechStackItem>HTML</TechStackItem>
         <TechStackItem>CSS</TechStackItem>
