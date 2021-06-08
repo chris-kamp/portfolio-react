@@ -1,5 +1,3 @@
-import TechStackItem from "./TechStackItem"
-
 const TechStackSection = ({posStart, heading, ...props}) => {
   return (
     <div className={`flex mt-4 ${posStart ? "justify-start" : "justify-end"}`}>

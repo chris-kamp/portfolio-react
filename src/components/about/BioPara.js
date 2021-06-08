@@ -1,6 +1,6 @@
 const BioPara = (props) => {
   return (
-    <p className="mb-3 text-sm xs:text-base sm:text-lg leading-tight xs:leading-snug text-light">
+    <p className="mb-3 text-sm leading-tight xs:text-base sm:text-lg xs:leading-snug text-light">
       {props.children}
     </p>
   )

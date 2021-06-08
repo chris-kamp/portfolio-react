@@ -4,10 +4,12 @@ import AboutContent from "./AboutContent"
 
 const About = () => {
   return (
-    <div className="grid h-screen / grid-rows-2af">
+    <div className="grid h-screen grid-rows-2af">
       <Navbar />
-      <AboutHeading />
-      <AboutContent />
+      <div>
+        <AboutHeading />
+        <AboutContent />
+      </div>
     </div>
   )
 }
