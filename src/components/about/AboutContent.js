@@ -1,5 +1,6 @@
 import Bio from "./Bio";
 import Card from "./Card";
+import History from "./History";
 import TechStack from "./TechStack";
 
 const AboutContent = () => {
@@ -15,7 +16,7 @@ const AboutContent = () => {
           <TechStack />
         </Card>
         <Card heading="HISTORY">
-          <TechStack />
+          <History />
         </Card>
       </div>
     </main>

@@ -18,6 +18,9 @@ module.exports = {
       gridTemplateRows: {
         "2af": "auto 1fr",
       },
+      gridTemplateColumns: {
+        "2af": "auto 1fr",
+      },
       borderWidth: {
         16: "16px",
         32: "32px",
