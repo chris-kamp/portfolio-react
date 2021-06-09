@@ -1,5 +1,5 @@
 import Bio from "./Bio";
-import Card from "./Card";
+import Card from "../shared/Card";
 import History from "./History";
 import TechStack from "./TechStack";
 

@@ -1,11 +1,14 @@
 import Navbar from "../nav/Navbar"
+import ProjectsContent from "./ProjectsContent"
+import ProjectsHeading from "./ProjectsHeading"
 
 const Project = () => {
   return (
-    <div className="grid h-screen / grid-rows-2af">
+    <div className="grid h-screen grid-rows-2af">
       <Navbar />
-      <div className="flex flex-col xl:grid xl:grid-cols-2">
-
+      <div>
+        <ProjectsHeading />
+        <ProjectsContent />
       </div>
     </div>
   )

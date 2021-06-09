@@ -1,6 +1,6 @@
-import TechStackItem from "./TechStackItem"
-import CardSection from "./CardSection"
-import TechStackSection from "./TechStackSection"
+import TechStackItem from "../shared/TechStackItem"
+import CardSection from "../shared/CardSection"
+import TechStackSection from "../shared/TechStackSection"
 
 const TechStack = () => {
   return (

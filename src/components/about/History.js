@@ -1,4 +1,4 @@
-import CardSection from "./CardSection"
+import CardSection from "../shared/CardSection"
 import HistoryItem from "./HistoryItem"
 
 const historyItems = {
