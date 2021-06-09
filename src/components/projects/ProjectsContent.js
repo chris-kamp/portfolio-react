@@ -2,6 +2,8 @@ import Card from "../shared/Card";
 import ProjectCardDescription from "./ProjectCardDescription";
 import ProjectCardTechStack from "./ProjectCardTechStack";
 import ProjectLinks from "./ProjectLinks";
+import githubLogoLight from "../../assets/github-logo-light-64.png";
+import materialLaunch from "../../assets/material-launch-48.png";
 
 const projects = [
   {
@@ -11,9 +13,10 @@ const projects = [
     techs: ["REACT", "JAVASCRIPT", "TAILWIND", "HTML", "CSS", "GIT", "GITHUB"],
     links: [
       {
-        imgSrc: "https://via.placeholder.com/48",
+        imgSrc: githubLogoLight,
         imgAlt: "GitHub Logo",
-        aHref: "#"
+        aHref: "https://github.com/chris-kamp/portfolio-react",
+        caption: "GITHUB",
       },
     ],
   },
@@ -35,14 +38,16 @@ const projects = [
     ],
     links: [
       {
-        imgSrc: "https://via.placeholder.com/48",
+        imgSrc: githubLogoLight,
         imgAlt: "GitHub Logo",
-        aHref: "#"
+        aHref: "https://github.com/chris-kamp/guideshare",
+        caption: "GITHUB",
       },
       {
-        imgSrc: "https://via.placeholder.com/48",
-        imgAlt: "Webpage Symbol",
-        aHref: "#"
+        imgSrc: materialLaunch,
+        imgAlt: "Launch Symbol",
+        aHref: "https://guideshare.herokuapp.com/",
+        caption: "OPEN",
       },
     ],
   },
@@ -53,14 +58,10 @@ const projects = [
     techs: ["RUBY", "GIT", "GITHUB"],
     links: [
       {
-        imgSrc: "https://via.placeholder.com/48",
+        imgSrc: githubLogoLight,
         imgAlt: "GitHub Logo",
-        aHref: "#"
-      },
-      {
-        imgSrc: "https://via.placeholder.com/48",
-        imgAlt: "Replit Logo",
-        aHref: "#"
+        aHref: "https://github.com/chris-kamp/terminal-hero",
+        caption: "GITHUB",
       },
     ],
   },
@@ -72,7 +73,7 @@ const ProjectsContent = () => {
       <section className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xs:gap-6 sm:gap-8">
         {projects.map((project, index) => (
           <Card heading={project.title} key={`${index}`}>
-            <ProjectLinks links={project.links}/>
+            <ProjectLinks links={project.links} />
             <ProjectCardDescription>
               {project.description}
             </ProjectCardDescription>
