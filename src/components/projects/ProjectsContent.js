@@ -5,7 +5,7 @@ import ProjectCardTechStack from "./ProjectCardTechStack"
 const projects = [
   {
     title: "PORTFOLIO",
-    description: "You're looking at it! My web development portfolio, created in React and using Tailwind CSS for styling.",
+    description: "You're looking at it! My web development portfolio, created in React and styled with Tailwind CSS.",
     techs: ["REACT", "JAVASCRIPT", "TAILWIND", "HTML", "CSS", "GIT", "GITHUB"]
   },
   {
@@ -26,6 +26,23 @@ const ProjectsContent = () => {
       <section className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xs:gap-6 sm:gap-8">
         {projects.map((project, index) => (
           <Card heading={project.title} key={`${index}`}>
+            <div className="flex justify-center w-full mb-1">
+              <img
+                src="https://via.placeholder.com/48"
+                alt=""
+                className="rounded-full mx-2"
+              />
+              <img
+                src="https://via.placeholder.com/48"
+                alt=""
+                className="rounded-full mx-2"
+              />
+              <img
+                src="https://via.placeholder.com/48"
+                alt=""
+                className="rounded-full mx-2"
+              />
+            </div>
             <ProjectCardDescription>
               {project.description}
             </ProjectCardDescription>

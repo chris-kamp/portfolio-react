@@ -17,6 +17,7 @@ module.exports = {
       },
       gridTemplateRows: {
         "2af": "auto 1fr",
+        "2fa": "1fr auto",
       },
       gridTemplateColumns: {
         "2af": "auto 1fr",
