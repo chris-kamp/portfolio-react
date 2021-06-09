@@ -22,15 +22,17 @@ const projects = [
 
 const ProjectsContent = () => {
   return (
-    <main className="grid w-full grid-cols-1 gap-4 px-3 md:grid-cols-2 xl:grid-cols-3 xs:gap-6 sm:gap-8 sm:px-12">
-      {projects.map((project, index) => (
-        <Card heading={project.title} key={`${index}`}>
-          <ProjectCardDescription>
-            {project.description}
-          </ProjectCardDescription>
-          <ProjectCardTechStack techs={project.techs}/>
-        </Card>
-      ))}
+    <main className="w-full px-3 sm:px-12">
+      <section className="grid w-full grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 xs:gap-6 sm:gap-8">
+        {projects.map((project, index) => (
+          <Card heading={project.title} key={`${index}`}>
+            <ProjectCardDescription>
+              {project.description}
+            </ProjectCardDescription>
+            <ProjectCardTechStack techs={project.techs}/>
+          </Card>
+        ))}
+      </section>
     </main>
   )
 }
