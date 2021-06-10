@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const NavItem = ({text, destination}) => {
   return (
-    <li className="flex-shrink-0 hidden h-full px-2 overflow-hidden flex-grow-1 sm:block">
+    <li className="flex-shrink-0 h-full px-2 overflow-hidden flex-grow-1 block">
       <Link
         to={destination}
         href="#"

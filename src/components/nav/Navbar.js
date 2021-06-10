@@ -1,22 +1,56 @@
-import NavItem from "./NavItem"
+import { useState, useEffect } from "react";
+import DropdownToggle from "./DropdownToggle";
+import TopNavItems from "./TopNavItems";
+import Logo from "./Logo";
+import DropdownMenu from "./DropdownMenu";
 
 const Navbar = () => {
+  const [windowWidth, setWindowWidth] = useState(undefined);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const openDropdown = () => {
+    setDropdownOpen(true);
+  };
+  const closeDropdown = () => {
+    setDropdownOpen(false);
+  };
+
+  const isMobile = () => {
+    return windowWidth < 640;
+  };
+
+  useEffect(() => {
+    const updateSize = () => {
+      setWindowWidth(window.screen.width);
+    }
+    const handleResize = () => {
+      updateSize();
+      if (dropdownOpen && windowWidth >= 640) {
+        closeDropdown();
+        console.log("Test")
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    updateSize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, [dropdownOpen, windowWidth]);
+
+
+
   return (
-    <nav className="flex justify-between pt-2 text-xl font-bold">
-      <div className="flex items-center w-32 ml-3 sm:ml-12 min-w-max">
-        <img
-          src="https://via.placeholder.com/60"
-          alt="CK Logo"
-          className="rounded-full"
-        />
-      </div>
-      <ul className="flex justify-around flex-auto max-w-2xl tracking-widest lg:max-w-3xl xl:max-w-4xl">
-        <NavItem text="HOME" destination="/"/>
-        <NavItem text="ABOUT" destination="/about"/>
-        <NavItem text="PROJECTS" destination="/projects"/>
-        <NavItem text="CONTACT" destination="/contact"/>
-      </ul>
-    </nav>
+    <>
+      <nav className="flex justify-between h-16 pt-2 text-xl font-bold">
+        <Logo />
+        {isMobile() ? (
+          <DropdownToggle
+            toggleProps={{ dropdownOpen, openDropdown, closeDropdown }}
+          />
+        ) : (
+          <TopNavItems />
+        )}
+      </nav>
+      {isMobile() && dropdownOpen && <DropdownMenu />}
+    </>
   );
 };
 
