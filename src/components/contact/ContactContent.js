@@ -1,3 +1,5 @@
+import TextPara from "../shared/TextPara";
+
 const ContactContent = () => {
   const onSubmit = () => {
     return;

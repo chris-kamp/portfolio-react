@@ -1,8 +1,8 @@
 const ProjectsHeading = () => {
   return (
     <>
-      {/* Span with tracking-normal removes trailing underline caused by letter spacing */}
-      <h1 className="mt-4 mb-6 text-3xl font-bold text-center underline xs:text-4xl sm:text-5xl tracking-2xwide sm:mt-7 sm:mb-9 lg:mb-12 lg:mt-10">PROJECT<span className="tracking-normal">S</span></h1>
+      {/* Span with tracking-normal removes trailing fixes incorrect centering caused by letter spacing */}
+      <h1 className="mt-4 mb-6 text-3xl font-bold text-center xs:text-4xl sm:text-5xl tracking-2xwide sm:mt-7 sm:mb-9 lg:mb-12 lg:mt-10">PROJECT<span className="tracking-normal">S</span></h1>
     </>
   )
 }
