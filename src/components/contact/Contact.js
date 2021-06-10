@@ -1,11 +1,14 @@
 import Navbar from "../nav/Navbar"
+import ContactHeading from "./ContactHeading"
+import ContactContent from "./ContactContent"
 
 const Contact = () => {
   return (
-    <div className="grid h-screen / grid-rows-2af">
+    <div className="grid h-screen grid-rows-2af">
       <Navbar />
-      <div className="flex flex-col xl:grid xl:grid-cols-2">
-
+      <div>
+        <ContactHeading />
+        <ContactContent />
       </div>
     </div>
   )
