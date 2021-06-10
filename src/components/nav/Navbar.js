@@ -30,9 +30,21 @@ const Navbar = () => {
         console.log("Test")
       }
     };
+    const handleClick = (e) => {
+      if(dropdownOpen && !(e.target.classList.contains("dropdownItem"))) {
+        closeDropdown();
+      }
+      document.removeEventListener("mousedown", handleClick);
+    }
     window.addEventListener("resize", handleResize);
+    if(dropdownOpen) {
+      document.addEventListener("mousedown", handleClick);
+    }
     updateSize();
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      document.removeEventListener("mousedown", handleClick);
+    }
   }, [dropdownOpen, windowWidth]);
 
 
