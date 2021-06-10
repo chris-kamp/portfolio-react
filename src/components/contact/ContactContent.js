@@ -1,8 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Formik } from "formik";
 import emailjs from "emailjs-com";
 
 const ContactContent = () => {
+  const [submissionSuccess, setSubmissionSuccess] = useState(false)
+  const [submissionFailure, setSubmissionFailure] = useState(false)
+
   emailjs.init("user_faOCtZiDkg0k5FOn8f45h");
 
   // Remove active effect from submit button when mouse released outside button
@@ -55,9 +58,11 @@ const ContactContent = () => {
             .then(
               () => {
                 resetForm();
+                setSubmissionSuccess(true);
               },
               (error) => {
                 console.error(error.text);
+                setSubmissionFailure(true);
               }
             )
             .finally(() => {
@@ -76,7 +81,7 @@ const ContactContent = () => {
         }) => (
           <form
             onSubmit={handleSubmit}
-            className="w-full max-w-5xl p-4 border-2 rounded-lg border-primary md:p-8"
+            className={`w-full max-w-5xl p-4 border-2 rounded-lg border-primary md:p-8 ${(submissionSuccess || submissionFailure) && "pb:0 md:pb-0"}`}
             id="contactform"
           >
             <div className="mb-4">
@@ -95,7 +100,7 @@ const ContactContent = () => {
                 onBlur={handleBlur}
                 value={values.name}
               />
-              <span className="block text-red-500 pl-1 text-sm xs:text-base sm:text-lg">
+              <span className="block pl-1 text-sm text-red-500 xs:text-base sm:text-lg">
                 {errors.name && touched.name && errors.name}
               </span>
             </div>
@@ -115,7 +120,7 @@ const ContactContent = () => {
                 onBlur={handleBlur}
                 value={values.email}
               />
-              <span className="block text-red-500 pl-1 text-sm xs:text-base sm:text-lg">
+              <span className="block pl-1 text-sm text-red-500 xs:text-base sm:text-lg">
                 {errors.email && touched.email && errors.email}
               </span>
             </div>
@@ -135,7 +140,7 @@ const ContactContent = () => {
                 onBlur={handleBlur}
                 value={values.message}
               />
-              <span className="block text-red-500 pl-1 text-sm xs:text-base sm:text-lg">
+              <span className="block pl-1 text-sm text-red-500 xs:text-base sm:text-lg">
                 {errors.message && touched.message && errors.message}
               </span>
             </div>
@@ -147,6 +152,8 @@ const ContactContent = () => {
               value="SEND"
               className="w-20 p-1 text-xl font-extrabold tracking-wider rounded-lg shadow outline-none sm:p-2 text-dark bg-primary focus:bg-primary-darker hover:bg-primary-lighter"
             ></input>
+            {submissionFailure && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center text-red-500 rounded-lg xs:text-lg sm:text-xl mt-1">Something went wrong! Try sending again.</span>}
+            {submissionSuccess && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl mt-1">Message sent. Thank you!</span>}
           </form>
         )}
       </Formik>
