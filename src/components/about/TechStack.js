@@ -29,6 +29,8 @@ const TechStack = () => {
           <TechStackItem>GIT</TechStackItem>
           <TechStackItem>GITHUB</TechStackItem>
           <TechStackItem>HEROKU</TechStackItem>
+          <TechStackItem>RSPEC</TechStackItem>
+          <TechStackItem>JEST</TechStackItem>
           <TechStackItem>POSTGRESQL</TechStackItem>
           <TechStackItem>CLOUDINARY</TechStackItem>
         </TechStackSection>
