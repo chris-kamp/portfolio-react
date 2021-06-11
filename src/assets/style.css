@@ -1,6 +1,6 @@
 @media only screen and (min-width: 640px) {
   .link-fill {
-    border-left: solid 24px #AEEEFF;
+    border-left: solid 24px rgb(174, 238, 255);
     background: linear-gradient(to right, transparent 50%, #AEEEFF 50%);
     background-size: 200% 100%;
     transition: 0.7s;

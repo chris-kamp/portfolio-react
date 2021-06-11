@@ -1,10 +1,11 @@
+import ckLogo from "../../assets/logo-60.png";
+
 const Logo = () => {
   return (
-    <div className="flex items-center w-32 ml-3 sm:ml-12 min-w-max">
+    <div className="flex items-center ml-3 sm:ml-12 min-w-max">
       <img
-        src="https://via.placeholder.com/60"
+        src={ckLogo}
         alt="CK Logo"
-        className="rounded-full"
       />
     </div>
   );
