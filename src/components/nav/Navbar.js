@@ -9,6 +9,7 @@ const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const openDropdown = () => {
+    window.scrollTo(0, 0);
     setDropdownOpen(true);
   };
   const closeDropdown = () => {
@@ -22,32 +23,38 @@ const Navbar = () => {
   useEffect(() => {
     const updateSize = () => {
       setWindowWidth(window.screen.width);
-    }
+    };
     const handleResize = () => {
       updateSize();
       if (dropdownOpen && windowWidth >= 640) {
         closeDropdown();
-        console.log("Test")
       }
     };
     const handleClick = (e) => {
-      if(dropdownOpen && !(e.target.classList.contains("dropdownItem"))) {
+      if (dropdownOpen && !e.target.classList.contains("dropdownItem")) {
         closeDropdown();
       }
       document.removeEventListener("mousedown", handleClick);
-    }
+    };
+    const handleScroll = (e) => {
+      if (dropdownOpen) {
+        closeDropdown();
+      }
+      document.removeEventListener("scroll", handleScroll);
+    };
     window.addEventListener("resize", handleResize);
-    if(dropdownOpen) {
+    if (dropdownOpen) {
       document.addEventListener("mousedown", handleClick);
+      document.addEventListener("scroll", handleScroll);
     }
     updateSize();
+
     return () => {
       window.removeEventListener("resize", handleResize);
       document.removeEventListener("mousedown", handleClick);
-    }
+      document.removeEventListener("scroll", handleScroll);
+    };
   }, [dropdownOpen, windowWidth]);
-
-
 
   return (
     <>
