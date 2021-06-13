@@ -4,11 +4,13 @@ import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Home from "./components/home/Home";
+import Navbar from "./components/nav/Navbar";
 
 function App() {
   return (
-    <div>
+    <div className="grid h-screen grid-rows-2af">
       <Router>
+        <Navbar />
         <Switch>
           <Route path="/about">
             <About />
