@@ -58,6 +58,7 @@ module.exports = {
       padding: ["hover"],
       borderWidth: ["hover"],
       width: ["hover"],
+      scale: ['active'],
     },
   },
   plugins: [
