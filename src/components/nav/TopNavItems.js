@@ -1,12 +1,12 @@
-import NavItem from "./NavItem";
+import TopNavItem from "./TopNavItem";
 
 const TopNavItems = () => {
   return (
     <ul className="flex justify-around flex-auto max-w-2xl tracking-widest lg:max-w-3xl xl:max-w-4xl">
-      <NavItem text="HOME" destination="/" />
-      <NavItem text="ABOUT" destination="/about" />
-      <NavItem text="PROJECTS" destination="/projects" />
-      <NavItem text="CONTACT" destination="/contact" />
+      <TopNavItem text="HOME" destination="/" />
+      <TopNavItem text="ABOUT" destination="/about" />
+      <TopNavItem text="PROJECTS" destination="/projects" />
+      <TopNavItem text="CONTACT" destination="/contact" />
     </ul>
   );
 };

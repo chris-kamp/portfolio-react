@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 
-const NavItem = ({ text, destination }) => {
+const TopNavItem = ({ text, destination }) => {
   const location = useLocation();
   const isActive = () => (location.pathname === destination)
   return (
@@ -16,4 +16,4 @@ const NavItem = ({ text, destination }) => {
   );
 };
 
-export default NavItem;
+export default TopNavItem;

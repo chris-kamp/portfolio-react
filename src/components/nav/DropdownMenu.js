@@ -1,14 +1,14 @@
-import { Link } from "react-router-dom";
+import DropdownNavItem from "./DropdownNavItem";
 import ModalOverlay from "./ModalOverlay";
 
 const DropdownMenu = () => {
   return (
     <>
       <ul className="fixed z-20 grid w-full grid-cols-1 mt-20 bg-dark">
-        <li className="p-2 mx-3 text-center border border-light"><Link to="/" className="dropdownItem w-full inline-block">HOME</Link></li>
-        <li className="p-2 mx-3 text-center border border-light"><Link to="/about" className="dropdownItem w-full inline-block">ABOUT</Link></li>
-        <li className="p-2 mx-3 text-center border border-light"><Link to="/projects" className="dropdownItem w-full inline-block">PROJECTS</Link></li>
-        <li className="p-2 mx-3 text-center border border-light"><Link to="/contact" className="dropdownItem w-full inline-block">CONTACT</Link></li>
+        <DropdownNavItem destination="/" text="HOME" />
+        <DropdownNavItem destination="/about" text="ABOUT" />
+        <DropdownNavItem destination="/projects" text="PROJECTS" />
+        <DropdownNavItem destination="/contact" text="CONTACT" />
       </ul>
       <ModalOverlay />
     </>
