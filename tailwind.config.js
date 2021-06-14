@@ -56,6 +56,7 @@ module.exports = {
       fontSize: ["hover"],
       fontWeight: ["hover"],
       padding: ["hover"],
+      borderWidth: ["hover"],
       width: ["hover"],
     },
   },

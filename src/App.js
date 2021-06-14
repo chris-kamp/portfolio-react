@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import "./assets/main.css";
 import About from "./components/about/About";
 import Projects from "./components/projects/Projects";
@@ -21,9 +21,10 @@ function App() {
           <Route path="/contact">
             <Contact />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
+          <Redirect to="/" />
         </Switch>
       </Router>
     </div>
