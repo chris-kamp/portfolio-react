@@ -3,13 +3,16 @@ const DropdownNavItem = ({text, destination}) => {
   const location = useLocation();
   const isActive = () => (location.pathname === destination)
   return (
-    <li className={`p-2 mx-3 text-center border border-light ${isActive() && "bg-primary text-dark pointer-events-none"}`}>
-      <NavLink
+    <li className={`p-2 mx-3 text-center border border-light ${isActive() && "bg-primary text-dark"}`}>
+      
+      {isActive() ? <span className="dropdownItem w-full inline-block">{text}</span> : (<NavLink
         to={destination}
         className="dropdownItem w-full inline-block"
       >
         {text}
-      </NavLink>
+      </NavLink>)}
+      
+     
     </li>
   );
 };
