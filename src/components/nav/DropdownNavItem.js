@@ -11,7 +11,7 @@ const DropdownNavItem = ({ text, destination }) => {
       {isActive() ? (
         <span className="inline-block w-full dropdownItem">{text}</span>
       ) : (
-        <NavLink to={destination} className="inline-block w-full dropdownItem">
+        <NavLink to={destination} className="flex items-center justify-center w-full h-full dropdownItem">
           {text}
         </NavLink>
       )}
