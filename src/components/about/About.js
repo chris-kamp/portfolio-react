@@ -1,12 +1,16 @@
 import AboutHeading from "./AboutHeading"
 import AboutContent from "./AboutContent"
+import ScrollToTop from "../utilities/ScrollToTop"
 
 const About = () => {
   return (
-    <div>
-      <AboutHeading />
-      <AboutContent />
-    </div>
+    <>
+      <ScrollToTop />
+      <div>
+        <AboutHeading />
+        <AboutContent />
+      </div>
+    </>
   )
 }
 

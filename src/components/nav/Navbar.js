@@ -4,13 +4,13 @@ import DropdownToggle from "./DropdownToggle";
 import TopNavItems from "./TopNavItems";
 import Logo from "./Logo";
 import DropdownMenu from "./DropdownMenu";
+import Headroom from "react-headroom";
 
 const Navbar = () => {
   const [windowWidth, setWindowWidth] = useState(undefined);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
   const openDropdown = () => {
-    window.scrollTo(0, 0);
     setDropdownOpen(true);
   };
   const closeDropdown = () => {
@@ -65,8 +65,8 @@ const Navbar = () => {
 
   
   return (
-    <>
-      <nav className="flex justify-between h-16 pt-2 text-xl font-bold">
+    <Headroom>
+      <nav className="flex justify-between h-18 pt-2 text-xl font-bold bg-dark overflow-hidden">
         <Logo />
         {isMobile() ? (
           <DropdownToggle
@@ -77,7 +77,7 @@ const Navbar = () => {
         )}
       </nav>
       {isMobile() && dropdownOpen && <DropdownMenu />}
-    </>
+    </Headroom>
   );
 };
 

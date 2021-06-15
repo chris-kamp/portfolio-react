@@ -1,13 +1,17 @@
 import ContactHeading from "./ContactHeading"
 import ContactContent from "./ContactContent"
+import ScrollToTop from "../utilities/ScrollToTop"
 
 
 const Contact = () => {
   return (
-    <div>
-      <ContactHeading />
-      <ContactContent />
-    </div>
+    <>
+      <ScrollToTop />
+      <div>
+        <ContactHeading />
+        <ContactContent />
+      </div>
+    </>
   )
 }
 
