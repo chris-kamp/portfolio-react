@@ -38,8 +38,8 @@ const Navbar = () => {
     const handleClick = (e) => {
       if (dropdownOpen && !e.target.classList.contains("dropdownItem")) {
         closeDropdown();
+        document.removeEventListener("mousedown", handleClick);
       }
-      document.removeEventListener("mousedown", handleClick);
     };
     const handleScroll = (e) => {
       if (dropdownOpen) {

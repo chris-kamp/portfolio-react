@@ -4,7 +4,7 @@ const DropdownNavItem = ({ text, destination }) => {
   const isActive = () => location.pathname === destination;
   return (
     <li
-      className={`p-2 mx-3 text-center border border-light text-2xl font-extrabold h-20 flex items-center ${
+      className={`dropdownItem mx-3 text-center border border-light text-2xl font-extrabold h-20 flex items-center ${
         isActive() && "bg-primary text-dark"
       }`}
     >
