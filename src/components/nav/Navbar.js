@@ -66,7 +66,7 @@ const Navbar = () => {
   
   return (
     <Headroom>
-      <nav className="flex justify-between h-18 pt-2 text-xl font-bold bg-dark overflow-hidden">
+      <nav className="flex justify-between h-18 pt-2 text-xl font-bold bg-dark pb-2 overflow-hidden">
         <Logo />
         {isMobile() ? (
           <DropdownToggle
