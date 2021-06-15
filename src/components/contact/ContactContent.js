@@ -152,8 +152,9 @@ const ContactContent = () => {
               value="SEND"
               className="w-20 p-1 text-xl font-extrabold tracking-wider rounded-lg shadow outline-none sm:p-2 text-dark bg-primary focus:bg-primary-darker hover:bg-primary-lighter"
             ></input>
-            {submissionFailure && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center text-red-500 rounded-lg xs:text-lg sm:text-xl mt-1">Something went wrong! Try sending again.</span>}
-            {submissionSuccess && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl mt-1">Message sent. Thank you!</span>}
+            {submissionFailure && !isSubmitting && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center text-red-500 rounded-lg xs:text-lg sm:text-xl mt-1">Something went wrong! Try sending again.</span>}
+            {submissionSuccess && !isSubmitting && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl mt-1">Message sent. Thank you!</span>}
+            {isSubmitting && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl mt-1">Sending, please wait...</span>}
           </form>
         )}
       </Formik>
