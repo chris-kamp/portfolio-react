@@ -5,10 +5,12 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Home from "./components/home/Home";
 import Navbar from "./components/nav/Navbar";
+import Footer from "./components/footer/Footer";
+
 
 function App() {
   return (
-    <div className="grid h-screen grid-rows-2af">
+    <div className="grid h-screen grid-rows-3afa">
       <Router>
         <Navbar />
         <Switch>
@@ -26,6 +28,7 @@ function App() {
           </Route>
           <Redirect to="/" />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

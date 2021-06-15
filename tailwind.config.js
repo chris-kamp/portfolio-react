@@ -2,10 +2,7 @@ const colors = require("tailwindcss/colors");
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ["./src/**/*.html", "./src/**/*.js", "./public/*.html"]
-  },
+  purge: ["./src/**/*.html", "./src/**/*.js", "./public/*.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -23,6 +20,7 @@ module.exports = {
       gridTemplateRows: {
         "2af": "auto 1fr",
         "2fa": "1fr auto",
+        "3afa": "auto 1fr auto",
       },
       gridTemplateColumns: {
         "2af": "auto 1fr",
