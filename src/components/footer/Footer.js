@@ -9,27 +9,27 @@ const Footer = () => {
       <div className="justify-center flex border-t border-primary py-3 w-8/12 border-opacity-60">
         <a
           href="https://github.com/chris-kamp"
-          className="rounded-full mx-2 transition-transform transform hover:scale-105 active:scale-95"
+          className="rounded-full mx-2 transition-transform transform hover:scale-110 active:scale-95"
           target="_blank"
           rel="noreferrer"
         >
-            <img className="w-8 md:w-12" src={githubLogoLight} alt="GitHub logo" />
+            <img className="w-8" src={githubLogoLight} alt="GitHub logo" />
         </a>
         <a
           href="https://www.linkedin.com/in/chris-kamp-b3976068/"
-          className="rounded-full mx-2 transition-transform transform hover:scale-105 active:scale-95"
+          className="rounded-full mx-2 transition-transform transform hover:scale-110 active:scale-95"
           target="_blank"
           rel="noreferrer"
         >
-            <img className="w-8 md:w-12" src={liLogo} alt="Linkedin logo" />
+            <img className="w-8" src={liLogo} alt="Linkedin logo" />
         </a>
         <a
           href="https://twitter.com/chris_k_dev"
-          className="rounded-full mx-2 transition-transform transform hover:scale-105 active:scale-95"
+          className="rounded-full mx-2 transition-transform transform hover:scale-110 active:scale-95"
           target="_blank"
           rel="noreferrer"
         >
-            <img className="w-8 md:w-12" src={twitterLogo} alt="Twitter logo" />
+            <img className="w-8" src={twitterLogo} alt="Twitter logo" />
         </a>
       </div>
     </div>
