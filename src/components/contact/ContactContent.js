@@ -34,11 +34,11 @@ const ContactContent = () => {
         validate={(values) => {
           const errors = {};
           if (!values.email) {
-            errors.email = "Please provide a contact email";
+            errors.email = "Please provide a contact email address";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
           ) {
-            errors.email = "Invalid email address";
+            errors.email = "Please enter a valid email address";
           }
           if (!values.name) {
             errors.name = "Please leave your name";
@@ -95,7 +95,7 @@ const ContactContent = () => {
                 type="text"
                 name="name"
                 placeholder="Name"
-                className="w-full text-sm border-2 rounded-lg bg-dark border-light focus:border-primary sm:w-4/6 xs:text-base sm:text-xl"
+                className={`w-full text-sm border-2 rounded-lg bg-dark sm:w-4/6 xs:text-base sm:text-xl ${(errors.name && touched.name) ? "ring-red-400 focus:ring-red-500 border-red-400 focus:border-red-500" : "border-light ring-light focus:border-primary focus:ring-primary"}`}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.name}
@@ -115,7 +115,7 @@ const ContactContent = () => {
                 type="email"
                 name="email"
                 placeholder="Email address"
-                className="w-full text-sm border-2 rounded-lg bg-dark border-light focus:border-primary sm:w-4/6 xs:text-base sm:text-xl"
+                className={`w-full text-sm border-2 rounded-lg bg-dark sm:w-4/6 xs:text-base sm:text-xl ${(errors.email && touched.email) ? "ring-red-400 focus:ring-red-500 border-red-400 focus:border-red-500" : "border-light ring-light focus:border-primary focus:ring-primary"}`}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.email}
@@ -135,7 +135,7 @@ const ContactContent = () => {
                 rows="10"
                 name="message"
                 placeholder="Leave a message..."
-                className="w-full text-sm border-2 rounded-lg bg-dark border-light focus:border-primary xs:text-base sm:text-xl"
+                className={`w-full text-sm border-2 rounded-lg bg-dark xs:text-base sm:text-xl ${(errors.message && touched.message) ? "ring-red-400 focus:ring-red-500 border-red-400 focus:border-red-500" : "border-light ring-light focus:border-primary focus:ring-primary"}`}
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={values.message}
@@ -150,11 +150,11 @@ const ContactContent = () => {
               disabled={isSubmitting}
               id="submit"
               value="SEND"
-              className="w-20 p-1 text-xl font-extrabold tracking-wider rounded-lg shadow outline-none sm:p-2 text-dark bg-primary focus:bg-primary-darker hover:bg-primary-lighter"
+              className="w-20 p-1 text-xl font-extrabold tracking-wider rounded-lg shadow outline-none sm:p-2 text-dark bg-vivid focus:bg-vivid-darker hover:bg-vivid-lighter"
             ></input>
-            {submissionFailure && !isSubmitting && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center text-red-500 rounded-lg xs:text-lg sm:text-xl mt-1">Something went wrong! Try sending again.</span>}
-            {submissionSuccess && !isSubmitting && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl mt-1">Message sent. Thank you!</span>}
-            {isSubmitting && <span className="block w-full pl-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl mt-1">Sending, please wait...</span>}
+            {submissionFailure && !isSubmitting && <span className="block w-full pl-1 mt-1 mb-2 text-base font-extrabold text-center text-red-500 rounded-lg xs:text-lg sm:text-xl">Something went wrong! Try sending again.</span>}
+            {submissionSuccess && !isSubmitting && <span className="block w-full pl-1 mt-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl">Message sent. Thank you!</span>}
+            {isSubmitting && <span className="block w-full pl-1 mt-1 mb-2 text-base font-extrabold text-center rounded-lg text-primary xs:text-lg sm:text-xl">Sending, please wait...</span>}
           </form>
         )}
       </Formik>
